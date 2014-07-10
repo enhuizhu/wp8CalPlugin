@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.rocabee.calendar"
+      version="0.1.0">
+    <name>Calendar</name>
+    <description>Sample PhoneGap Calendar Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap,calendar</keywords>
+    <js-module src="www/winCalendar.js" name="winCalendar">
+        <clobbers target="window.winCalendar" />
+    </js-module>
+
+    <!-- wp8-->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Calendar">
+                <param name="wp-package" value="com.rocabee.sporekrani.Calendar"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp8/Calendar.cs"/>      
+     </platform>          
+</plugin>
