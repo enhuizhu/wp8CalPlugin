@@ -6,15 +6,14 @@ function winCalendar(){
 
 winCalendar.prototype.createEvent=function(event,location,matchStartTime){
 	
-	    alert("will add event to calendar!");
 		try{
-		 cordova.exec(this.success, this.error, "com.rocabee.sporekrani.Calendar","windowAlert",["hello"]);
+		 cordova.exec(this.success, this.error, "Calendar","createEvent",[event,location,matchStartTime]);
 		}catch(e){
 		  alert("error message:"+e.message);
 		}
 }
 
-winCalendar.prototype.win=function(msg){
+winCalendar.prototype.success=function(msg){
        alert("success message:"+msg);
 }
 
