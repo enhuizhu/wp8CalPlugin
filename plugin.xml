@@ -14,7 +14,7 @@
     <platform name="wp8">
         <config-file target="config.xml" parent="/*">
             <feature name="Calendar">
-                <param name="wp-package" value="com.rocabee.sporekrani.Calendar"/>
+                <param name="wp-package" value="Calendar"/>
             </feature>
         </config-file>
 
